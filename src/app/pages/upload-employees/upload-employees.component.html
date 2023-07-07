@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title">Upload CSV File</h5>
+      </div>
+      <div class="card-body">
+        <div class="text-center">
+          <input
+            class="form-control"
+            type="file"
+            accept=".csv"
+            (change)="onChange($event)"
+          />
+
+          <button (click)="onUpload()" class="btn btn-success">
+            Upload File
+          </button>
+        </div>
+        <div class="container" *ngIf="loading">
+          <h3>Loading ...</h3>
+        </div>
+      </div>
+      <div class="card-footer">
+        <hr />
+        <div class="stats">
+          <div class="alert alert-success alert-dismissible fade show">
+            <button
+              type="button"
+              aria-hidden="true"
+              class="close"
+              data-dismiss="alert"
+              aria-label="Close"
+            >
+              <i class="nc-icon nc-simple-remove"></i>
+            </button>
+            <span> <b> Success - </b> CSV file is successfully submitted</span>
+          </div>
+          <div class="alert alert-danger alert-dismissible fade show">
+            <button
+              type="button"
+              aria-hidden="true"
+              class="close"
+              data-dismiss="alert"
+              aria-label="Close"
+            >
+              <i class="nc-icon nc-simple-remove"></i>
+            </button>
+            <span> <b> Failed - </b> CSV file upload is failed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
