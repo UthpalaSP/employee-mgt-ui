@@ -10,9 +10,9 @@
 
 ## Screenshots
 
-````1.
-![alt text](https://github.com/UthpalaSP/employee-mgt-ui/blob/main/documentation/Screenshot%201.png)
+```1.
+![Screenshot 1](https://github.com/UthpalaSP/employee-mgt-ui/blob/main/documentation/Screenshot%201.png?raw=true)
 
 ```2.
-![alt text](https://github.com/UthpalaSP/employee-mgt-ui/blob/main/documentation/Screenshot%202.png)
+![Screenshot 2](https://github.com/UthpalaSP/employee-mgt-ui/blob/main/documentation/Screenshot%202.png?raw=true)
 ````
