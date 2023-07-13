@@ -4,6 +4,7 @@ import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { ToastrModule } from "ngx-toastr";
 import { HttpClientModule } from "@angular/common/http";
+import { TableModule } from "primeng/table";
 
 import { SidebarModule } from "./sidebar/sidebar.module";
 import { FooterModule } from "./shared/footer/footer.module";
@@ -37,6 +38,7 @@ import { FileUploadService } from "./services/file-upload.service";
     ToastrModule.forRoot(),
     FooterModule,
     FixedPluginModule,
+    TableModule,
   ],
   providers: [FileUploadService],
   bootstrap: [AppComponent],

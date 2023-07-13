@@ -9,6 +9,9 @@ import { FileUploadService } from "../../services/file-upload.service";
 export class UploadEmployeesComponent implements OnInit {
   loading: boolean = false;
   file: File = null;
+  isError = false;
+  error: string = "";
+  isSuccess = false;
 
   constructor(private fileUploadService: FileUploadService) {}
 
@@ -19,13 +22,18 @@ export class UploadEmployeesComponent implements OnInit {
   }
 
   onUpload() {
-    this.loading = !this.loading;
     console.log(this.file);
-    this.fileUploadService.upload(this.file).subscribe((event: any) => {
-      if (typeof event === "object") {
+    if (this.file) {
+      this.loading = true;
+      this.fileUploadService.upload(this.file).subscribe((event: any) => {
+        if (event.status === "error") {
+          this.isError = true;
+          this.error = event.message;
+        } else {
+          this.isSuccess = true;
+        }
         this.loading = false;
-      }
-    });
-    //TODO error/success
+      });
+    }
   }
 }
