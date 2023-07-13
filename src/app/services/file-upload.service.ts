@@ -7,7 +7,7 @@ import { Observable } from "rxjs";
 })
 export class FileUploadService {
   //TODO
-  baseApiUrl = "https://file.io";
+  baseApiUrl = "http://localhost:5000/api/employee/create";
 
   constructor(private http: HttpClient) {}
 
