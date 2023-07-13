@@ -10,9 +10,8 @@
 
 ## Screenshots
 
-```1.
-![Screenshot 1](https://github.com/UthpalaSP/employee-mgt-ui/blob/main/documentation/Screenshot%201.png?raw=true)
+````
+<img width="1424" alt="Screenshot 1" src="https://github.com/UthpalaSP/employee-mgt-ui/assets/18046260/b3556d1d-dc8b-4548-ab6b-a5cc9ccb7d99">
 
-```2.
-![Screenshot 2](https://github.com/UthpalaSP/employee-mgt-ui/blob/main/documentation/Screenshot%202.png?raw=true)
+<img width="1427" alt="Screenshot 2" src="https://github.com/UthpalaSP/employee-mgt-ui/assets/18046260/7c394842-c453-49e0-a29b-e64c7664329f">
 ````
