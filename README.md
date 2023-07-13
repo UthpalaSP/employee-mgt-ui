@@ -7,3 +7,12 @@
 5. Then: `npm install`
 6. And: `ng serve`
 7. Navigate to: [http://localhost:4200/](http://localhost:4200/)
+
+## Screenshots
+
+````1.
+![alt text](https://github.com/UthpalaSP/employee-mgt-ui/blob/main/documentation/Screenshot%201.png)
+
+```2.
+![alt text](https://github.com/UthpalaSP/employee-mgt-ui/blob/main/documentation/Screenshot%202.png)
+````
