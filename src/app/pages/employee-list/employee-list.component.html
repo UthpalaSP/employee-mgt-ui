@@ -2,17 +2,70 @@
   <div class="col-md-12">
     <div class="card">
       <div class="card-header">
-        <h5 class="card-title">Users Behavior</h5>
-        <p class="card-category">24 Hours performance</p>
+        <h5 class="card-title">Employee List</h5>
       </div>
       <div class="card-body">
-        <canvas id="chartHours" width="400" height="100"></canvas>
+        <div class="card">
+          <p-table
+            #dt1
+            [value]="employees"
+            [lazy]="true"
+            (onLazyLoad)="loadEmployees($event)"
+            dataKey="id"
+            [tableStyle]="{ 'min-width': '75rem' }"
+            [paginator]="true"
+            [rows]="10"
+            [showCurrentPageReport]="true"
+            currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+            [rowsPerPageOptions]="[10, 25, 50]"
+            [totalRecords]="totalRecords"
+            [loading]="loading"
+            [globalFilterFields]="['id', 'name', 'login', 'salary']"
+          >
+            <ng-template pTemplate="header">
+              <tr>
+                <th pSortableColumn="id">
+                  Id <p-sortIcon field="id"></p-sortIcon>
+                </th>
+                <th pSortableColumn="login">
+                  Login <p-sortIcon field="login"></p-sortIcon>
+                </th>
+                <th pSortableColumn="name">
+                  Name <p-sortIcon field="name"></p-sortIcon>
+                </th>
+                <th pSortableColumn="salary">
+                  Salary <p-sortIcon field="salary"></p-sortIcon>
+                </th>
+              </tr>
+              <tr>
+                <th>
+                  <p-columnFilter type="text" field="id"></p-columnFilter>
+                </th>
+                <th>
+                  <p-columnFilter type="text" field="login"></p-columnFilter>
+                </th>
+                <th>
+                  <p-columnFilter type="text" field="name"></p-columnFilter>
+                </th>
+                <th>
+                  <p-columnFilter type="text" field="salary"></p-columnFilter>
+                </th>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-employee>
+              <tr>
+                <td>{{ employee.id }}</td>
+                <td>{{ employee.login }}</td>
+                <td>{{ employee.name }}</td>
+                <td>{{ employee.salary }}</td>
+              </tr>
+            </ng-template>
+          </p-table>
+        </div>
       </div>
       <div class="card-footer">
         <hr />
-        <div class="stats">
-          <i class="fa fa-history"></i> Updated 3 minutes ago
-        </div>
+        <div class="stats"></div>
       </div>
     </div>
   </div>
